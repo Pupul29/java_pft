@@ -7,24 +7,27 @@ public class MyFirstProgram {
     hello ("user");
     hello ("Wojtek");
 
-    double l = 5;
-    System.out.println("powierzchnia boku kwadratu " + l + " = " + area(l));
+    Square s = new Square(5);
 
-    double a = 4;
-    double b = 6;
-    System.out.println("powierzchnia prostokąta " + a + " i " + b +" = " + area(a ,b));
+    s.l = 5;
+    System.out.println("powierzchnia boku kwadratu " + s.l + " = " + s.area());
+
+    Rectangle r = new Rectangle(4,6);
+
+
+    System.out.println("powierzchnia prostokąta " + r.a + " i " + r.b +" = " + r.area());
   }
 
   public static void hello (String somebody) {
 
     System.out.println("Hello, " + somebody + "!");
   }
-  public static double area (double len) {
-    return len * len;
+
 
   }
-  public static double area (double a, double b) {
-    return a * b;
+  public static double area (Rectangle r) {
+
+  return r.a * r.b;
   }
 
 }
