@@ -1,0 +1,21 @@
+package ru.stqa.pft.sandbox;
+
+import static java.lang.Math.sqrt;
+
+public class Point {
+
+  public Point (int x, int y) {
+    this.x = x;
+    this.y = y;
+
+  }
+
+
+  public int x;
+  public int y;
+
+  public double distance(Point p2) {
+    return sqrt( (p2.x - this.x) ^ 2 + (p2.y - this.y) ^ 2);
+  }
+
+}

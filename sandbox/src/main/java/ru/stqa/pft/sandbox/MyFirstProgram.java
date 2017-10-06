@@ -1,33 +1,20 @@
 package ru.stqa.pft.sandbox;
 
+import static java.lang.Math.sqrt;
+
 public class MyFirstProgram {
 
   public static void main(String[] args) {
-    hello ("world");
-    hello ("user");
-    hello ("Wojtek");
 
-    Square s = new Square(5);
-
-    s.l = 5;
-    System.out.println("powierzchnia boku kwadratu " + s.l + " = " + s.area());
-
-    Rectangle r = new Rectangle(4,6);
+    Point p1 = new Point(  2,5);
+    Point p2 = new Point(  6,6);
 
 
-    System.out.println("powierzchnia prostokąta " + r.a + " i " + r.b +" = " + r.area());
+
+
+    System.out.println("Distance between points x(" + p1.x + "," + p2.x + ") " +
+             "and y(" + p1.y + "," + p2.y + ") is " + p1.distance(p2));
   }
 
-  public static void hello (String somebody) {
-
-    System.out.println("Hello, " + somebody + "!");
-  }
-
-
-  }
-  public static double area (Rectangle r) {
-
-  return r.a * r.b;
-  }
 
 }
