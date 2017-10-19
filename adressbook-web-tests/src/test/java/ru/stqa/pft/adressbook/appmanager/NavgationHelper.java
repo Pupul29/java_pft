@@ -3,14 +3,14 @@ package ru.stqa.pft.adressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class NavgationHelper {
-  private FirefoxDriver wd;
+public class NavgationHelper extends HelperBase {
+
 
   public NavgationHelper(FirefoxDriver wd) {
-    this wd. = wd;
+    super(wd);
   }
   public void gotoGroupPage() {
-    wd.findElement(By.linkText("groups")).click();
+    click(By.linkText("groups"));
   }
 }
 
